@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable prefer-const */
 
 let invoices = [
@@ -37,6 +38,12 @@ export function getInvoices() {
   return invoices;
 }
 
-export function getInvoice(number: number) {
+export function getInvoice(number: any) {
   return invoices.find((invoice) => invoice.number === number);
 }
+
+export function deleteInvoice(number: any) {
+    invoices = invoices.filter(
+      (invoice) => invoice.number !== number
+    );
+  }
