@@ -1,4 +1,6 @@
-const invoices = [
+/* eslint-disable prefer-const */
+
+let invoices = [
   {
     name: "Santa Monica",
     number: 1995,
